@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FisioClick - Edwin Villarreal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🩺 FisioClick</h1>
+        <p>Lic. Edwin Villarreal Gomez</p>
+    </header>
+    <main>
+        <section class="card">
+            <h3>1. Datos del Paciente</h3>
+            <input type="tel" id="phone" placeholder="Número de WhatsApp (ej. 52...)" required>
+        </section>
+
+        <section class="card">
+            <h3>2. Selecciona la Zona de Tratamiento</h3>
+            <select id="zone" onchange="cambiarZona()">
+                <option value="">-- Elige una zona clínica --</option>
+                <option value="cervical">Cervical (Cuello) 🧘</option>
+                <option value="dorsal">Dorsal (Espalda Media) 🩻</option>
+                <option value="lumbar">Lumbar (Espalda Baja) 🦴</option>
+                <option value="hombro">Hombro (Manguito Rotador) 🦾</option>
+                <option value="rodilla">Rodilla (Articulación) 🦵</option>
+                <option value="tobillo">Tobillo y Pie (Propiocepción) 👣</option>
+                <option value="muneca">Muñeca y Mano 🖐️</option>
+            </select>
+        </section>
+
+        <section class="card" id="exercises-section" style="display:none;">
+            <h3>3. Prescribir Ejercicios</h3>
+            <div id="exercises-list"></div>
+        </section>
+
+        <button id="send-btn" onclick="enviarWhatsApp()">🚀 Enviar Rutina por WhatsApp</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
